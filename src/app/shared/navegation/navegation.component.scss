@@ -1,0 +1,208 @@
+.mobile-header{
+  // border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: white;
+  // margin-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 2rem;
+        margin: 0;
+      }
+    }
+  }
+}
+
+/* Mat list  */
+
+.float-menu {
+  position: fixed;
+  bottom: 0;
+  top: 5rem;
+  // border: 1px solid;
+  z-index: 998;
+
+  width: 100%;
+  mat-list {
+    background-color: #ebf2eb !important;
+    mat-list-item {
+      color: #a5b4a9 !important;
+      cursor: pointer;
+    }
+
+    /* wrap redes */
+    .wrap-redes {
+      color: #a5b4a9 !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100% !important;
+      mat-icon {
+        margin-right: 1.2rem;
+      a {
+          color: #a5b4a9 !important;
+
+        }
+      }
+
+
+    }
+  }
+}
+
+.buscador {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  // margin-top: 5rem;
+  margin-bottom: 1rem;
+  z-index: 999;
+
+
+}
+
+.animate__animated.animate__backInDown {
+  --animate-duration: .6s !important;
+}
+
+/* Header lg */
+.header-lg {
+  width: 100%;
+  height: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  // border: 1px solid;
+  padding-top: 2rem;
+  // margin-bottom: 3rem;
+
+  .wrap-content-max {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+
+    // border: 1px solid red;
+
+    .logo {
+      margin-bottom: 2rem;
+
+      h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 3rem;
+        margin: 0;
+      }
+    }
+
+    .navegation {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      background-color: #ebf2eb;
+      // border: 1px solid;
+      margin-bottom: 2rem;
+
+
+      ul {
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 100%;
+
+        li {
+          list-style: none;
+          padding-right: 3rem;
+          text-decoration: none;
+          // color: #a5b4a9;
+          cursor: pointer;
+          color: black;
+          font-weight: 500;
+          font-family: "Poppins", sans-serif;
+          transition: all .3s ease-in-out;
+        }
+
+
+
+        }
+
+
+
+        li:hover {
+          color: #71ac84 !important;
+        }
+
+        button {
+          margin-top: 2rem;
+        }
+      }
+
+  }
+}
+
+
+
+
+/* Clase fix */
+// 1. esta clase se le agrega al float-menu;
+.fix-float-menu{
+  margin-top: 1rem !important;
+}
+
+ /* Esta clase se le agrega al los a cuando las rutas estan activa */
+.routeActive {
+  color: #71ac84 !important;
+}
+
+.routeActiveMobile {
+
+  color: black !important;
+}
+
+/* Media Queries */
+
+@media screen and ( min-width: 768px ) {
+  .mobile-header{
+    display: none !important;
+  }
+  .wrap-search-mobile {
+
+    display: none !important;
+  }
+  .float-menu {
+    display: none !important;
+  }
+
+  .header-lg {
+    display: flex !important;
+  }
+
+  .wrap-content-max {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

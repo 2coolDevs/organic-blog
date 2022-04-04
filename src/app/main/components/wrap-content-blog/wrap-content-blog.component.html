@@ -1,0 +1,26 @@
+<section>
+  <div class="container wrap-content-max">
+   <div class="row d-flex justify-content-between">
+     <article *ngIf="titulo" class="title-page">
+       <h1>{{ titulo |titlecase}}</h1>
+       <hr>
+     </article>
+
+   <div class="row">
+    <div class="col-12 mb-5 mb-md-0 col-md-9">
+      <div class="row d-flex d-flex">
+                <!-- post component -->
+               <app-post *ngFor="let post of posts" [post]="post" class="col-12 col-md-4 mx-auto mx-md-0"></app-post>
+      </div>
+  </div>
+
+
+  <!-- Lateral content blog -->
+  <div class="col-12  col-md-3 d-flex justify-content-center justify-content-md-end ">
+    <!-- lateral blog content -->
+      <app-lateral-blog></app-lateral-blog>
+  </div>
+   </div>
+   </div>
+  </div>
+ </section>

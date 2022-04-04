@@ -1,0 +1,12 @@
+
+  <article>
+    <div class="info-post">
+      <p [routerLink]="['/categoria/', post?.categories?.[0].name]" >{{ post.categories?.[0].name |uppercase}}</p>
+      <h3 [routerLink]="['/', post?.slug]" >{{ post?.title |titlecase}}</h3>
+      <span [routerLink]="['/', post?.slug]">
+        <p>Read more</p>
+      </span>
+    </div>
+
+    <img [src]=" post?.featured_image " [alt]="post?.featured_image_alt" />
+  </article>

@@ -1,0 +1,31 @@
+<main>
+  <div class="container wrap-content-max">
+
+    <div class="row w-100 d-flex justify-content-between">
+
+      <div class="col-12 mb-5 mb-md-0 col-md-8">
+          <!-- post recuperado -->
+          <div class="row">
+            <article class="title-page">
+              <h1>{{ post?.title |uppercase }}</h1>
+              <hr>
+            </article>
+            <img [src]="post?.featured_image" [alt]="post?.featured_image_alt" class="mb-4">
+            <article [innerHTML]="post?.body" class="post">
+            </article>
+          </div>
+
+      </div>
+
+
+      <div class="col-12  col-md-3 d-flex justify-content-end">
+        <!-- lateral blog content -->
+          <app-lateral-blog></app-lateral-blog>
+      </div>
+
+      <!-- otras entradas  -->
+      <app-post-relacionados  [slug]="paramSlug"></app-post-relacionados>
+    </div>
+  </div>
+
+</main>

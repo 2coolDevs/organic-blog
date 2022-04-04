@@ -1,0 +1,59 @@
+<header class="mobile-header">
+  <section class="wrap-content-max container">
+    <button mat-icon-button (click)="desplegarMenu()"><mat-icon>menu</mat-icon>
+    </button>
+    <article class="logo"> <h1>Healty</h1> </article>
+      <button (click)="desplegarBuscador()" mat-icon-button> <mat-icon>search</mat-icon> </button>
+    </section>
+</header>
+<div class="wrap-search-mobile">
+  <app-buscador *ngIf="toggleSearch" class="container wrap-content-max buscador animate__animated" [class.animate__backInDown]="toggleSearch" ></app-buscador>
+</div>
+
+<!-- Header lg -->
+<header   [ngStyle]="{ 'margin-bottom': toggleSearch ? '.5rem' : '3.5rem' }"  class="header-lg">
+  <section class="wrap-content-max container">
+    <!-- Logo -->
+    <article class="logo"> <h1>Healty</h1> </article>
+
+    <!-- Navegation -->
+    <nav class="navegation">
+      <div class="wrap-content-max container">
+        <ul>
+          <li routerLink="/home" routerLinkActive="routeActive">HOME</li>
+          <li routerLink="/categoria/breakfast" routerLinkActive="routeActive">BREAKFAST</li>
+          <li routerLink="/categoria/lunch" routerLinkActive="routeActive">LUNCH</li>
+          <li routerLink="/categoria/fruits" routerLinkActive="routeActive">FRUITS</li>
+          <li routerLink="/categoria/homemade" routerLinkActive="routeActive">HOME MADE</li>
+          <li routerLink="/que-es-healty" routerLinkActive="routeActive">QUIENES SOMOS?</li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- Buscador -->
+    <button (click)="desplegarBuscador()" mat-icon-button> <mat-icon>search</mat-icon> </button>
+  </section>
+</header>
+<app-buscador *ngIf="toggleSearch" class="container wrap-content-max buscador animate__animated" [class.animate__backInDown]="toggleSearch" ></app-buscador>
+
+
+<!-- end Header lg -->
+<!-- List Menu -->
+<aside *ngIf="muestraMenu"  [class.animate__backInRight]="muestraMenu" class="float-menu animate__animated">
+  <mat-list>
+    <mat-list-item (click)="cerrarMenu()" routerLink="/home" routerLinkActive="routeActiveMobile">HOME</mat-list-item>
+    <mat-list-item (click)="cerrarMenu()" routerLink="/categoria/breakfast" routerLinkActive="routeActiveMobile">BREAKFAST</mat-list-item>
+    <mat-list-item (click)="cerrarMenu()" routerLink="/categoria/lunch" routerLinkActive="routeActiveMobile">LUNCH</mat-list-item>
+    <mat-list-item (click)="cerrarMenu()" routerLink="/categoria/fruits" routerLinkActive="routeActiveMobile">FRUITS</mat-list-item>
+    <mat-list-item (click)="cerrarMenu()" routerLink="/categoria/homemade" routerLinkActive="routeActiveMobile">HOME MADE</mat-list-item>
+    <mat-list-item (click)="cerrarMenu()" routerLink="/que-es-healty" routerLinkActive="routeActiveMobile">CONTACT</mat-list-item>
+    <mat-list-item class="wrap-redes">
+      <mat-icon><a href="#"><i class="fa-brands fa-youtube"></i></a></mat-icon>
+      <mat-icon><a href="#"><i class="fa-brands fa-instagram"></i></a></mat-icon>
+      <mat-icon><a href="#"><i class="fa-brands fa-twitter"></i></a></mat-icon>
+      <mat-icon><a href="#"><i class="fa-brands fa-pinterest"></i></a></mat-icon>
+    </mat-list-item>
+  </mat-list>
+
+</aside>
