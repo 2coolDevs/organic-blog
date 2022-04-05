@@ -13,7 +13,6 @@ import { LateralBlogComponent } from './components/lateral-blog/lateral-blog.com
 import { ViewPostComponent } from './pages/view-post/view-post.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { WrapContentBlogComponent } from './components/wrap-content-blog/wrap-content-blog.component';
-import { DatePostComponent } from './pages/date-post/date-post.component';
 import { PostRelacionadosComponent } from './components/post-relacionados/post-relacionados.component';
 import { PostRelacionadosPipe } from './pipe/post-relacionados.pipe';
 import { QueEsHealtyComponent } from './pages/que-es-healty/que-es-healty.component';
@@ -39,7 +38,6 @@ import { SharedModule } from '../shared/shared.module';
     LateralBlogComponent,
     ViewPostComponent,
     WrapContentBlogComponent,
-    DatePostComponent,
     PostRelacionadosComponent,
     PostRelacionadosPipe,
     QueEsHealtyComponent,

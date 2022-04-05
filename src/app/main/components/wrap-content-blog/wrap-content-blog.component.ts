@@ -1,26 +1,23 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-wrap-content-blog',
   templateUrl: './wrap-content-blog.component.html',
   styles: [
-
     `
-    section {
-  height: auto;
-  min-height: 40rem !important;
-}
-`
-  ]
+      section {
+        height: auto;
+        min-height: 40rem !important;
+      }
+    `,
+  ],
 })
 export class WrapContentBlogComponent {
-
   constructor() {}
 
-/* Recibo los posts */
-  @Input() posts!: any[]
+  /* Recibo los posts */
+  @Input() posts!: any[];
 
   /* recibo el titulo de pagina */
-  @Input() titulo!:string
-
+  @Input() titulo!: string;
 }

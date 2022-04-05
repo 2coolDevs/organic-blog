@@ -3,8 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-skeleton-loader',
   template: `
-
-      <!-- <div class="wrap-image">
+    <!-- <div class="wrap-image">
         <ngx-skeleton-loader
           [theme]="{
             'background-color': '#E5E5E5',
@@ -25,15 +24,11 @@ import { Component, Input, OnInit } from '@angular/core';
         <div></div>
       </div>
     </article> -->
-    <mat-spinner ></mat-spinner>
+    <mat-spinner></mat-spinner>
   `,
-  styles: [`
-
-  `],
+  styles: [``],
 })
-export class SkeletonLoaderComponent implements OnInit {
+export class SkeletonLoaderComponent  {
   constructor() {}
-
-  ngOnInit(): void {}
   @Input() post!: any;
 }

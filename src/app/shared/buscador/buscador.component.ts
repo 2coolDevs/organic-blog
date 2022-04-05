@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit, Output } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { BlogService } from 'src/app/main/services/blog.service';
 
 @Component({
@@ -7,44 +7,33 @@ import { BlogService } from 'src/app/main/services/blog.service';
   templateUrl: './buscador.component.html',
   styles: [
     `
-
-
       mat-form-field {
         width: 100% !important;
         /* max-width: 20rem; */
       }
       mat-icon {
-      color: #BFBFBF !important;
-
+        color: #bfbfbf !important;
       }
-
-    `
-  ]
+    `,
+  ],
 })
-export class BuscadorComponent implements OnInit {
+export class BuscadorComponent {
+  constructor(private butter: BlogService, private _router: Router) {}
 
-  constructor( private butter:BlogService, private _router:Router) {   }
+  query: string = '';
 
-  query: string = ''
+  searchPost() {
+    this.butter.query = this.query.trim();
+    this.butter.searchPosts();
 
-  ngOnInit(): void {
-
+    if (this.query) {
+      this._router
+        .navigateByUrl('/home', { skipLocationChange: true })
+        .then(() => {
+          this._router.navigate([`/search/${this.query}`]);
+          this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+          this.query = '';
+        });
+    }
   }
-
-  searchPost()  {
-    this.butter.query = this.query.trim()
-    this.butter.searchPosts()
-
-
-   if( this.query ) {
-    this._router.navigateByUrl( '/home',{skipLocationChange: true} ).then( () => {
-      this._router.navigate([`/search/${this.query}`])
-      this._router.routeReuseStrategy.shouldReuseRoute = () => false
-      this.query = '';
-    } )
-  }
-
-
-  }
-
 }
